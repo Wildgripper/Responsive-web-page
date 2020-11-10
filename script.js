@@ -1,22 +1,28 @@
-const buttonSecond = document.getElementById("second");
+function moveDiv(x) {
+  if (x.matches) {
+    destination.appendChild(form);
+    banner.appendChild(button);
+
+  } else {
+    banner.appendChild(form);
+    destination.appendChild(button);
+  }
+}
+
+var x = window.matchMedia("(max-width: 720px)")
+moveDiv(x)
+x.addListener(moveDiv)
+
+const buttonSecond = document.getElementById("button");
 buttonSecond.addEventListener('click', function () {
-    var elmnt = document.getElementById("title");
+  var elmnt = document.getElementById("title");
   elmnt.scrollIntoView();
 });
 
-const buttonFirst = document.getElementById("first");
-buttonFirst.addEventListener('click', function () {
-    var elmnt = document.getElementById("title-second");
-  elmnt.scrollIntoView();
+
+const submit = document.querySelector('.submit');
+submit.addEventListener('click', function () {
+  alert("Thank You for submitting email!");
 });
 
-const submitUp = document.querySelector('.up');
-submitUp.addEventListener('click', function () {
-    alert("Thank You for submitting email!");
-  });
-
-  const submitDown = document.querySelector('.down');
-submitDown.addEventListener('click', function () {
-    alert("Thank You for submitting email!");
-  });
 
